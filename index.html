@@ -5,17 +5,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Temperature Converter</title>
+        <link rel="stylesheet" href="reset.css">        
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header></header>
         <main id="hero">
             <h1>Temperature Converter</h1>
-            <label for="inputNum">
-                <input id="inputNum" placeholder="Pick a number" type="number"/>
-            </label>
-            <button onclick="convert()">Convert</button>
-            <p id="demo"></p> 
+            <div id="toFahrenheitDiv" class="demo">
+                <form>
+                    <label for="inputNum1">
+                        <input id="inputNum1" placeholder="Pick a number" type="number" required/>
+                    </label>
+                    <button id="fahrenheitButton" type="button" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+                </form>
+                <p id="FahrenheitDisplay"></p> 
+            </div>
+            <div id="toCelsiusDiv" class="demo">
+                <form>
+                    <label for="inputNum3">
+                        <input id="inputNum3" placeholder="Pick a number" type="number"/>
+                    </label>
+                    <button id="celsiusButton" type="button" onclick="convertToCelsius()">Convert to Celsius</button>
+                </form>
+                <p id="CelsiusDisplay"></p> 
+            </div>
         </main>
         <footer>
             <script src="script.js"></script>
